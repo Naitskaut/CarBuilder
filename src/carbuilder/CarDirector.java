@@ -1,6 +1,7 @@
 package carbuilder;
 
 public class CarDirector {
+    //3clean code, director for creating by receipt
     public void makeSportCar(CarBuilder builder){
         builder.reset()
                 .setType(CarType.SPORT)

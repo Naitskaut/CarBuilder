@@ -1,7 +1,7 @@
 package carbuilder;
 
 public class StandardEngine implements Engine {
-    private final double volume;
+    private final double volume; //use final to ensure that data doesn't change
     private final int mileageKm;
 
     public StandardEngine(double volume, int mileageKm){
@@ -9,7 +9,7 @@ public class StandardEngine implements Engine {
         this.mileageKm = mileageKm;
 
     }
-
+    //getters
     @Override
     public double getVolume(){
         return volume;
@@ -20,10 +20,12 @@ public class StandardEngine implements Engine {
         return mileageKm;
 
     }
+    //fully describe engine
     @Override
     public String describe(){
         return "Standard engine, %.1fL, %d km".formatted(volume,mileageKm);
     }
+    //partly describe engine
     @Override
     public String getName(){ return "Standart engine, %.1fL".formatted(volume);}
 }

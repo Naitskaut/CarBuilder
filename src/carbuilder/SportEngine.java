@@ -2,14 +2,14 @@ package carbuilder;
 
 public class SportEngine implements Engine {
 
-    private final double volume;
-    private final int mileageKm;
+    private final double volume; //1 clean code
+    private final int mileageKm;//encapsulation
 
     public SportEngine(double volume, int mileageKm){
         this.volume = volume;
         this.mileageKm = mileageKm;
     }
-
+    //getters
     @Override
     public double getVolume(){
         return volume;
@@ -19,11 +19,13 @@ public class SportEngine implements Engine {
     public int getMileageKm(){
         return mileageKm;
     }
+    //fully describe engine
 
     @Override
     public String describe() {
         return "Sport engine, %.1fL, %d km".formatted(volume,mileageKm);
     }
+    //partly describe engine
 
     @Override
     public String getName(){
