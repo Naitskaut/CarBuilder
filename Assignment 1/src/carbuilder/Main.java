@@ -27,15 +27,23 @@ public class Main {
         CarManualBuilder manualBuilder = new CarManualBuilder();
         director.makeSportCar(manualBuilder);
         CarManual sportManual = manualBuilder.getResult();
-        System.out.println(sportManual);
+        System.out.println(sportManual.getContent());
 
         Car customCar = new CarPartsBuilder()
-                .setType(CarType.SPORT)
+                .setType(CarType.SUV)
                 .setEngine(new SportEngine(4.0, 100))
                 .setSeats(2)
                 .setTransmission(Transmission.AUTOMATIC)
                 .getResult();
         System.out.println(customCar);
+
+        CarManual customManual = new CarManualBuilder()
+                .setType(CarType.SPORT)
+                .setEngine(new SportEngine(16.0, 0))
+                .setTransmission(Transmission.MANUAL)
+                .setSeats(2)
+                .getResult();
+        System.out.println(customManual.getContent());
 
         try {
             new CarPartsBuilder()
@@ -49,4 +57,3 @@ public class Main {
         }
     }
 }
-//6clean code, meaningful name

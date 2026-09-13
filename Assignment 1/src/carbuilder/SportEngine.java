@@ -2,7 +2,7 @@ package carbuilder;
 
 public class SportEngine implements Engine {
 
-    private final double volume; //1 clean code
+    private final double volume;
     private final int mileageKm;//encapsulation
 
     public SportEngine(double volume, int mileageKm){

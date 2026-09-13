@@ -19,7 +19,6 @@ public class CarPartsBuilder implements CarBuilder{
         return this;
     }
 
-    //2clean code; small methods
     @Override
     public CarPartsBuilder setType(CarType type){
         this.type = type;
@@ -44,7 +43,6 @@ public class CarPartsBuilder implements CarBuilder{
         validate();
         return new Car(type,engine,transmission,seats);
     }
-    //4clean code, validated construction to catch exceptions
     private void validate(){
         if (type == null) {
             throw new IllegalStateException("Car type must be set before building a car");

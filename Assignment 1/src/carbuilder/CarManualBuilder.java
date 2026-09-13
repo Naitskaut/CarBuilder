@@ -9,7 +9,7 @@ public class CarManualBuilder implements CarBuilder {
     @Override
     public CarManualBuilder reset(){
         manual.setLength(0);
-        manual.append("---User Manual---\n");
+        manual.append("\n---User Manual---\n");
         return this;
 
     }
@@ -25,13 +25,13 @@ public class CarManualBuilder implements CarBuilder {
     }
     @Override
     public CarManualBuilder setTransmission(Transmission transmission){
-        manual.append("- Car transmission: ").append(transmission);
+        manual.append("- Car transmission: ").append(transmission).append("\n");
         return this;
 
     }
     @Override
     public CarManualBuilder setSeats(int seats){
-        manual.append("\n- Seats: ").append(seats).append("\n");
+        manual.append("- Seats: ").append(seats).append("\n");
         return this;
     }
     public CarManual getResult(){
